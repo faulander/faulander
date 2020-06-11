@@ -1,0 +1,169 @@
+{% load static wagtailuserbar %}
+
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>
+            {% block title %}
+                {% if self.seo_title %}{{ self.seo_title }}{% else %}{{ self.title }}{% endif %}
+            {% endblock %}
+            {% block title_suffix %}
+                {% with self.get_site.site_name as site_name %}
+                    {% if site_name %}- {{ site_name }}{% endif %}
+                {% endwith %}
+            {% endblock %}
+        </title>
+        <meta name="description" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <!--== Favicon ==-->
+        <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon" />
+        <!--== Google Fonts ==-->
+        <link href="https://fonts.googleapis.com/css?family=Karla:400,400i,700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i" rel="stylesheet">
+
+        {# Global stylesheets #}
+        <!-- build:css css/app.min.css -->
+        <!--== Timeline Min CSS ==-->
+        <link href="{% static 'css/timeline.min.css' %}" rel="stylesheet" />
+        <!--== Slicknav Min CSS ==-->
+        <link href="{% static 'css/slicknav.min.css' %}" rel="stylesheet" />
+        <!--== Revolution Slider Settings CSS ==-->
+        <link href="{% static 'css/settings.css' %}" rel="stylesheet" />
+        <!--== Nice Select Min CSS ==-->
+        <link href="{% static 'css/nice-select.min.css' %}" rel="stylesheet" />
+        <!--== Lightslider Min CSS ==-->
+        <link href="{% static 'css/lightslider.min.css' %}" rel="stylesheet" />
+        <!--== Magnific Popup Min CSS ==-->
+        <link href="{% static 'css/magnific-popup.min.css' %}" rel="stylesheet" />
+        <!--== Leaflet Min CSS ==-->
+        <link href="{% static 'css/leaflet.min.css' %}" rel="stylesheet" />
+        <!--== justifiedGallery Min CSS ==-->
+        <link href="{% static 'css/justifiedGallery.min.css' %}" rel="stylesheet" />
+        <!--== jQuery UI Min CSS ==-->
+        <link href="{% static 'css/jquery-ui.min.css' %}" rel="stylesheet" />
+        <!--== Multi Scroll Min CSS ==-->
+        <link href="{% static 'css/jquery.multiscroll.min.css' %}" rel="stylesheet" />
+        <!--== Custom Scrollbar Min CSS ==-->
+        <link href="{% static 'css/jquery.mCustomScrollbar.min.css' %}" rel="stylesheet" />
+        <!--== Fullpage Min CSS ==-->
+        <link href="{% static 'css/jquery.fullpage.min.css' %}" rel="stylesheet" />
+        <!--== Helper Min CSS ==-->
+        <link href="{% static 'css/helper.min.css' %}" rel="stylesheet" />
+        <!--== Animate Min CSS ==-->
+        <link href="{% static 'css/animate.min.css' %}" rel="stylesheet" />
+        <!--== Linea Icon Min CSS ==-->
+        <link href="{% static 'css/linea.min.css' %}" rel="stylesheet" />
+        <!--== Pe Icon 7 Stroke Min CSS ==-->
+        <link href="{% static 'css/pe-icon-7-stroke.min.css' %}" rel="stylesheet" />
+        <!--== Font-Awesome Min CSS ==-->
+        <link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet" />
+        <!--== Bootstrap Min CSS ==-->
+        <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" />
+
+        <!--== Main Style CSS ==-->
+        <link href="{% static 'css/style.min.css' %}" rel="stylesheet" />
+        <!-- endbuild -->
+
+        <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        {% block extra_css %}
+            {# Override this in templates to add extra stylesheets #}
+        {% endblock %}
+    </head>
+
+    <body class="{% block body_class %}{% endblock %}">
+        {% wagtailuserbar %}
+
+        {% block content %}{% endblock %}
+
+        {# Global javascript #}
+        <!--=======================Javascript============================-->
+        <!-- build:js {% static 'js/app.min.js -->
+        <!--=== Modernizr Min Js ===-->
+        <script src="{% static 'js/modernizr-3.6.0.min.js' %}"></script>
+        <!--=== jQuery Min Js ===-->
+        <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+        <!--=== jQuery Migration Min Js ===-->
+        <script src="{% static 'js/jquery-migrate-1.2.1.min.js' %}"></script>
+        <!--=== Popper Min Js ===-->
+        <script src="{% static 'js/popper.min.js' %}"></script>
+        <!--=== Bootstrap Min Js ===-->
+        <script src="{% static 'js/bootstrap.min.js' %}"></script>
+        <!--=== CounterUp Min Js ===-->
+        <script src="{% static 'js/counterup.min.js' %}"></script>
+        <!--=== Isotope Min Js ===-->
+        <script src="{% static 'js/isotope.pkgd.min.js' %}"></script>
+        <!--=== jQuery AjaxChimp Min Js ===-->
+        <script src="{% static 'js/jquery.ajaxchimp.min.js' %}"></script>
+        <!--=== jQuery Appear Min Js ===-->
+        <script src="{% static 'js/jquery.appear.js' %}"></script>
+        <!--=== jQuery Countdown Min Js ===-->
+        <script src="{% static 'js/jquery.countdown.min.js' %}"></script>
+        <!--=== jQuery EasyPieChart Min Js ===-->
+        <script src="{% static 'js/jquery.easypiechart.min.js' %}"></script>
+        <!--=== Fullapage Min Js ===-->
+        <script src="{% static 'js/jquery.fullpage.min.js' %}"></script>
+        <!--=== JustifiedGallery Min Js ===-->
+        <script src="{% static 'js/jquery.justifiedGallery.min.js' %}"></script>
+        <!--=== Magnific Popup Min Js ===-->
+        <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+        <!--=== MatchHeight Min Js ===-->
+        <script src="{% static 'js/jquery.matchHeight-min.js' %}"></script>
+        <!--=== mCustomScrollbar Min Js ===-->
+        <script src="{% static 'js/jquery.mCustomScrollbar.min.js' %}"></script>
+        <!--=== multiscroll Min Js ===-->
+        <script src="{% static 'js/jquery.multiscroll.min.js' %}"></script>
+        <!--=== Nice Select Min Js ===-->
+        <script src="{% static 'js/jquery.nice-select.min.js' %}"></script>
+        <!--=== Slicknav Min Js ===-->
+        <script src="{% static 'js/jquery.slicknav.min.js' %}"></script>
+        <!--=== Sticky Sidebar Min Js ===-->
+        <script src="{% static 'js/jquery.sticky-sidebar.min.js' %}"></script>
+        <!--=== jquery UI Min Js ===-->
+        <script src="{% static 'js/jquery-ui.min.js' %}"></script>
+        <!--=== Leaflet Min Js ===-->
+        <script src="{% static 'js/leaflet.min.js' %}"></script>
+        <!--=== Light Slider Min Js ===-->
+        <script src="{% static 'js/lightslider.min.js' %}"></script>
+        <!--=== Parallax Min Js ===-->
+        <script src="{% static 'js/parallax.min.js' %}"></script>
+        <!--=== Tippy Min Js ===-->
+        <script src="{% static 'js/tippy.all.min.js' %}"></script>
+        <!--=== Typed Min Js ===-->
+        <script src="{% static 'js/typed.min.js' %}"></script>
+        <!--=== Waypoint Min Js ===-->
+        <script src="{% static 'js/waypoint.min.js' %}"></script>
+
+        <!--=== Active Js ===-->
+        <script src="{% static 'js/active.js' %}"></script>
+
+        <!-- REVOLUTION JS FILES -->
+        <script src="{% static 'js/revslider/jquery.themepunch.tools.min.js' %}"></script>
+        <script src="{% static 'js/revslider/jquery.themepunch.revolution.min.js' %}"></script>
+
+
+        <!-- SLIDER REVOLUTION 5.0 EXTENSIONS  (Load Extensions only on Local File Systems !  The following part can be removed on Server for On Demand Loading) -->
+        <script src="{% static 'js/revslider/extensions/revolution.extension.actions.min.js' %}"></script>
+        <script src="{% static 'js/revslider/extensions/revolution.extension.carousel.min.js' %}"></script>
+        <script src="{% static 'js/revslider/extensions/revolution.extension.kenburn.min.js' %}"></script>
+        <script src="{% static 'js/revslider/extensions/revolution.extension.layeranimation.min.js' %}"></script>
+        <script src="{% static 'js/revslider/extensions/revolution.extension.migration.min.js' %}"></script>
+        <script src="{% static 'js/revslider/extensions/revolution.extension.navigation.min.js' %}"></script>
+        <script src="{% static 'js/revslider/extensions/revolution.extension.parallax.min.js' %}"></script>
+        <script src="{% static 'js/revslider/extensions/revolution.extension.slideanims.min.js' %}"></script>
+        <script src="{% static 'js/revslider/extensions/revolution.extension.video.min.js' %}"></script>
+
+        <!--=== REVOLUTION JS ===-->
+        <script src="{% static 'js/revslider/rev-active.js' %}"></script>
+
+        <!-- endbuild -->
+
+        {% block extra_js %}
+            {# Override this in templates to add extra javascript #}
+        {% endblock %}
+    </body>
+</html>

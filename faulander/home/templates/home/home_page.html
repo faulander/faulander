@@ -1,0 +1,579 @@
+{% extends "base.html" %}
+
+{% load static wagtailcore_tags %}
+
+{% block body_class %}template-homepage{% endblock %}
+
+{% block content %}
+<body class="preloader-active">
+
+  <!--== Start Preloader Content ==-->
+  <div class="preloader-wrap">
+      <div class="preloader">
+          <span class="dot"></span>
+          <div class="dots">
+              <span></span>
+              <span></span>
+              <span></span>
+          </div>
+      </div>
+  </div>
+  <!--== End Preloader Content ==-->
+
+
+
+
+
+
+
+
+
+
+
+  <!--== Start Header Wrapper ==-->
+  <header class="header-area header-scrolling transparent sticky-header">
+      <div class="container">
+          <div class="row align-items-center">
+              <div class="col-5 col-lg-2">
+                  <div class="header-logo-area">
+                      <a href="index.html">
+                          <img class="logo-main" src="{% static 'img/logo.png' %}" alt="Logo" />
+                          <img class="logo-light" src="{% static 'img/logo-light.png' %}" alt="Logo" />
+                      </a>
+                  </div>
+              </div>
+
+              <div class="col-7 col-lg-10">
+                  <div class="header-navigation-area d-none d-lg-block">
+                      <ul class="main-menu nav justify-content-end">
+                          <li><a class="smooth-scroll-link" href="#">Home</a></li>
+                          <li><a class="smooth-scroll-link" href="#about">About</a></li>
+                          <li><a class="smooth-scroll-link" href="#resume">Resume</a></li>
+                          <li><a class="smooth-scroll-link" href="#blog">Blog</a></li>
+                          <li><a class="smooth-scroll-link" href="#contact">Contact</a></li>
+                      </ul>
+                  </div>
+
+                  <div class="header-action-area d-lg-none text-right">
+                      <button class="btn-menu"><i class="fa fa-bars"></i></button>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </header>
+  <!--== End Header Wrapper ==-->
+
+
+
+
+  <main class="site-wrapper site-wrapper-reveal">
+      <!--== Start Hero Area ==-->
+      <div class="freelancer-hero-wrapper parallax bg-img" data-bg="{% static 'img/banner/freelancer-hero.jpg' %}">
+          <div class="container h-100">
+              <div class="row align-items-center h-100">
+                  <div class="col-12 text-center">
+                      <div class="freelancer-hero-content">
+                          <h2>FAULANDER</h2>
+                          <h4>I'm <span id="typed"></span></h4>
+                          <div id="typed-strings" class="d-none">
+                              <p>HARALD FAULAND</p>
+                              <p>developing (Python, Nim)</p>
+                              <p>travelling</p>
+                              <p>reading</p>
+                              <p>photographing</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+          <!-- Animation Button -->
+          <a href="#about" class="smooth-scroll-link hero-animate-btn"><i class="icon-arrows-down"></i> About Me</a>
+      </div>
+      <!--== End Hero Area ==-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <!--== Start About Area ==-->
+      <section class="about about-modern sp-top" id="about">
+          <div class="container">
+              <div class="row align-items-center">
+                  <div class="col-lg-5">
+                      <figure class="about-thumb about-freelancer">
+                          <img src="{% static 'img/about/me_bw.jpg' %}" alt="Harald Fauland (Black & White)" />
+                      </figure>
+                  </div>
+
+                  <div class="col-lg-6 ml-auto">
+                      <div class="about-content">
+                          <div class="section-title mb-0">
+                              <h5>About</h5>
+                              <h2>I'm Harald Fauland</h2>
+                              <p>I am a passionate head of support for the market leader in a software company located in Vienna, Austria. </p>
+
+                              <div class="skill-content-wrapper mt-55 mt-sm-30 mb-40 mb-sm-30">
+                                  <div class="skill-wrapper">
+                                      <!-- Start Skills Item #1 -->
+                                      <div class="progress-bar-item">
+                                          <div class="progress-info">
+                                              <span class="progress-info__title">TEAMLEADING</span>
+                                              <span class="progress-info__percent percent"></span>
+                                          </div>
+
+                                          <div class="progress-line">
+                                              <div class="progress-line-bar" data-percent="85%"></div>
+                                          </div>
+                                      </div>
+
+                                      <!-- Start Skills Item #2 -->
+                                      <div class="progress-bar-item">
+                                          <div class="progress-info">
+                                              <span class="progress-info__title">PROCESSES</span>
+                                              <span class="progress-info__percent percent"></span>
+                                          </div>
+
+                                          <div class="progress-line">
+                                              <div class="progress-line-bar" data-percent="80%"></div>
+                                          </div>
+                                      </div>
+
+                                      <!-- Start Skills Item #3 -->
+                                      <div class="progress-bar-item">
+                                          <div class="progress-info">
+                                              <span class="progress-info__title">IT-KNOWLEDGE</span>
+                                              <span class="progress-info__percent percent"></span>
+                                          </div>
+
+                                          <div class="progress-line">
+                                              <div class="progress-line-bar" data-percent="90%"></div>
+                                          </div>
+                                      </div>
+
+                                      <!-- Start Skills Item #4 -->
+                                      <div class="progress-bar-item">
+                                          <div class="progress-info">
+                                              <span class="progress-info__title">DEVELOPING</span>
+                                              <span class="progress-info__percent percent"></span>
+                                          </div>
+
+                                          <div class="progress-line">
+                                              <div class="progress-line-bar" data-percent="60%"></div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+
+                              <!--<a href="#" class="btn btn-bordered">Download CV</a> -->
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+      <!--== End About Area ==-->
+
+
+      <!--== Start Resume Area  ==-->
+      <div class="resume-area-wrapper bg-softWhite sp-y sm-top" id="resume">
+          <div class="container">
+              <div class="row">
+                  <div class="col-12 text-center">
+                      <div class="section-title">
+                          <h5>Resume</h5>
+                          <h2>Work & Education</h2>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="row">
+                  <div class="col-lg-10 m-auto">
+                      <div class="resume-content-wrap">
+                          <ul class="nav tab-nav--2 justify-content-center">
+                              <li>
+                                  <a class="active" data-toggle="tab" href="#workExperience" aria-selected="true">Experience</a>
+                              </li>
+
+                              <li>
+                                  <a data-toggle="tab" href="#educationQualification">Education</a>
+                              </li>
+                          </ul>
+
+                          <div class="tab-content">
+                              <div class="tab-pane fade show active" id="workExperience">
+                                  <div class="work-experience-content">
+                                      <div class="cd-timeline-wrap">
+                                          <div class="cd-timeline">
+                                              <!-- Start Timeline Item #01 -->
+                                              <div class="cd-timeline-block">
+                                                  <div class="cd-timeline-dot"></div>
+
+                                                  <div class="cd-timeline-content">
+                                                      <h5>ADVOKAT - HEAD OF SUPPORT (2019)</h5>
+                                                      <p>Team of 8. Current position. Working on introducing JIRA, Microsoft Teams and battling the COVID-19 crisis.</p>
+                                                  </div>
+                                              </div>
+
+                                              <!-- Start Timeline Item #02 -->
+                                              <div class="cd-timeline-block">
+                                                  <div class="cd-timeline-dot"></div>
+
+                                                  <div class="cd-timeline-content">
+                                                      <div class="cd-heading">
+                                                          <h5>MEDIAMID - HEAD OF SUPPORT (2018)</h5>
+                                                          <p>Team of 4. Helped setup ELK-Stack for centralized logging.</p>
+                                                      </div>
+                                                  </div>
+                                              </div>
+
+                                              <!-- Start Timeline Item #03 -->
+                                              <div class="cd-timeline-block">
+                                                  <div class="cd-timeline-dot"></div>
+
+                                                  <div class="cd-timeline-content">
+                                                      <div class="cd-heading">
+                                                          <h5>VNET- HEAD OF SUPPORT (2016)</h5>
+                                                          <p>Team of 6, Introduced a helpdesk, a 24 hour support model, new processes and lead the team.</p>
+                                                      </div>
+                                                  </div>
+                                              </div>
+
+                                              <!-- Start Timeline Item #04 -->
+                                              <div class="cd-timeline-block">
+                                                  <div class="cd-timeline-dot"></div>
+
+                                                  <div class="cd-timeline-content">
+                                                      <div class="cd-heading">
+                                                          <h5>INTACT - KEY ACCOUNT MANAGEMENT (2010)</h5>
+                                                          <p>Managend several internation key account clients. Lead infrastructure and software projects.</p>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+
+                              <div class="tab-pane fade" id="educationQualification">
+                                  <div class="cd-timeline-wrap">
+                                      <div class="cd-timeline">
+                                          <!-- Start Timeline Item #01 -->
+                                          <div class="cd-timeline-block">
+                                              <div class="cd-timeline-dot"></div>
+
+                                              <div class="cd-timeline-content">
+                                                  <h5>Studying 'Wirtschaftsinformatik'</h5>
+                                                  <p>Starting university in fall of 2020.</p>
+                                              </div>
+                                          </div>
+
+                                          <!-- Start Timeline Item #02 -->
+                                          <div class="cd-timeline-block">
+                                              <div class="cd-timeline-dot"></div>
+
+                                              <div class="cd-timeline-content">
+                                                  <div class="cd-heading">
+                                                      <h5>Certification as software tester</h5>
+                                                      <p>ISTQB Certification as software tester.</p>
+                                                  </div>
+                                              </div>
+                                          </div>
+
+                                          <!-- Start Timeline Item #03 -->
+                                          <div class="cd-timeline-block">
+                                              <div class="cd-timeline-dot"></div>
+
+                                              <div class="cd-timeline-content">
+                                                  <div class="cd-heading">
+                                                      <h5>ITIL 4 - Managing Professional</h5>
+                                                      <p>Practical and technical knowledge about how to run successful IT enabled services, teams and workflows.</p>
+                                                  </div>
+                                              </div>
+                                          </div>
+
+                                          <!-- Start Timeline Item #04 -->
+                                          <div class="cd-timeline-block">
+                                              <div class="cd-timeline-dot"></div>
+
+                                              <div class="cd-timeline-content">
+                                                  <div class="cd-heading">
+                                                      <h5>ITIL 4 - Foundation</h5>
+                                                      <p>IT service management through an end-to-end operating model for the creation, delivery and continual improvement of tech-enabled products.</p>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                          <!-- Start Timeline Item #05 -->
+                                          <div class="cd-timeline-block">
+                                              <div class="cd-timeline-dot"></div>
+
+                                              <div class="cd-timeline-content">
+                                                  <div class="cd-heading">
+                                                      <h5>COMPTIA A+</h5>
+                                                      <p>CompTIA A+ certified professionals are proven problem solvers. They support today’s core technologies from security to cloud to data management and more. CompTIA A+ is the industry standard for launching IT careers into today’s digital world. </p>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <!--== End Resume Area  ==-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <!--== Start Blog Post Area ==-->
+      <div class="blog-post-area sp-y sm-top bg-softWhite" id="blog">
+          <div class="container">
+              <div class="row">
+                  <div class="col-12 text-center">
+                      <div class="section-title">
+                          <h5>Latest</h5>
+                          <h2>From my Blog</h2>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="row mtn-30">
+                  <div class="col-lg-4">
+                      <!-- Start Blog Post Item -->
+                      <div class="post-item matchHeight">
+                          <span class="post-day">10</span>
+                          <div class="post-thumb" data-bg="{% static 'img/blog/blog-01.jpg' %}"></div>
+                          <div class="post-info">
+                              <a class="post-info__cate" href="blog.html">Business</a>
+                              <h4 class="post-info__title"><a href="blog-details.html">New webpage design</a></h4>
+                              <div class="post-info__meta"><a href="#">March 10, 2020</a></div>
+                              <div class="post-info__excerpts">
+                                  <p>Started on redesigning the webpage.</p>
+                              </div>
+                              <div class="post-info__action">
+                                  <a href="#" class="btn btn-bottom">Read full Post</a>
+                              </div>
+                          </div>
+                      </div>
+                      <!-- End Blog Post Item -->
+                  </div>
+
+              </div>
+          </div>
+      </div>
+      <!--== End Blog Post Area ==-->
+
+
+
+
+
+
+
+
+
+
+      <!--== Start Contact Area ==-->
+      <div class="contact-area-wrapper sp-y" id="contact">
+          <div class="container">
+              <div class="row">
+                  <div class="col-12 text-center">
+                      <div class="section-title ">
+                          <h5>Contact</h5>
+                          <h2>Get in touch</h2>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="row">
+                  <div class="col-12">
+                      <div class="call-to-contact">
+                          <div class="row">
+                              <div class="col-md-6">
+                                  <h5>OFFICE</h5>
+                                  <h4 class="mb-0">1080 Wien, Stephansplatz 7a</h4>
+                              </div>
+                              <div class="col-md-6 mt-sm-25">
+                                  <h5>OR MESSAGE ME</h5>
+                                  <h4 class="mb-0">harry@faulander.at, (+43)6642558218</h4>
+                              </div>
+                          </div>
+                      </div>
+
+                      <div class="contact-form-wrap sm-top-wp">
+                          <form id="contact-form" action="#" method="post">
+                              <div class="contact-from-content mtn-70 mtn-sm-30">
+                                  <div class="row">
+                                      <div class="col-md-4">
+                                          <div class="form-input-item">
+                                              <input type="text" name="con_name" placeholder="Name" required />
+                                          </div>
+                                      </div>
+
+                                      <div class="col-md-4">
+                                          <div class="form-input-item">
+                                              <input type="email" name="con_email" placeholder="Email" required />
+                                          </div>
+                                      </div>
+
+                                      <div class="col-md-4">
+                                          <div class="form-input-item">
+                                              <input type="text" name="con_phone" placeholder="Phone Number" />
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div class="row align-items-end">
+                                      <div class="col-lg-10">
+                                          <div class="form-input-item">
+                                              <label for="message" class="sr-only">Message</label>
+                                              <textarea name="con_message" id="message" cols="30" rows="2" placeholder="Your Message" required></textarea>
+                                          </div>
+                                      </div>
+
+                                      <div class="col-lg-2">
+                                          <div class="form-input-item">
+                                              <button class="btn btn-bordered">Send Messages</button>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+
+                              <!-- Message Notification -->
+                              <div class="form-message"></div>
+                          </form>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <!--== End Contact Area ==-->
+
+  </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!--== Start Footer Area Wrapper ==-->
+  <footer class="footer-area reveal-footer footer-area--layout-2 bg-softWhite">
+      <div class="container">
+          <div class="row align-items-center">
+              <div class="col-md-6">
+                  <nav class="footer-menu-wrap">
+                      <ul class="footer-menu nav justify-content-center justify-content-md-start">
+                          <li><a class="smooth-scroll-link" href="#blog">Blog</a></li>
+                          <!-- <li><a class="smooth-scroll-link" href="#portfolios">Latest Projects</a></li> -->
+                          <li><a class="smooth-scroll-link" href="#contact">Contact Me</a></li>
+                      </ul>
+                  </nav>
+              </div>
+              <div class="col-md-6 text-center text-md-right">
+                  <div class="copyright-txt mt-sm-10">
+                      <p>&copy; faulander.at 2020. Made with <span class="text-danger">&hearts;</span> by Harald Fauland</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </footer>
+  <!--== End Footer Area Wrapper ==-->
+
+
+
+
+  <!-- Scroll Top Button -->
+  <button class="btn-scroll-top"><i class="fa fa-angle-up"></i></button>
+
+
+  <!-- Start Off Canvas Menu Wrapper -->
+  <aside class="off-canvas-wrapper">
+      <div class="off-canvas-inner">
+          <!-- Start Off Canvas Content Wrapper -->
+          <div class="off-canvas-content">
+              <!-- Off Canvas Header -->
+              <div class="off-canvas-header">
+                  <div class="logo-area">
+                      <a href="index.html"><img src="{% static 'img/logo.png' %}" alt="Logo" /></a>
+                  </div>
+                  <div class="close-action">
+                      <button class="btn-close"><i class="pe-7s-close"></i></button>
+                  </div>
+              </div>
+
+              <div class="off-canvas-item">
+                  <!-- Start Mobile Menu Wrapper -->
+                  <div class="res-mobile-menu">
+                      <!-- Note Content Auto Generate By Jquery From Main Menu -->
+                  </div>
+                  <!-- End Mobile Menu Wrapper -->
+              </div>
+          </div>
+          <!-- End Off Canvas Content Wrapper -->
+      </div>
+  </aside>
+  <!-- End Off Canvas Menu Wrapper -->
+{% endblock %}

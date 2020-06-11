@@ -1,0 +1,28 @@
+/*=========================
+58. Element Divider CSS
+==========================*/
+.divider {
+  display: block;
+  border-color: #ebebeb;
+
+
+  &--thin {
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+  }
+
+  &--thick {
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+  }
+
+  &--dash{
+    border-bottom-width: 1px;
+    border-bottom-style: dashed;
+  }
+
+  &--dot{
+    border-bottom-width: 2px;
+    border-bottom-style: dotted;
+  }
+}

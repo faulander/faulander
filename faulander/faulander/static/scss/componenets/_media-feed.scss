@@ -1,0 +1,127 @@
+/*=========================
+59. Element Media Feed
+===========================*/
+.instragam-feed-header {
+  margin-bottom: 40px;
+
+  @media #{$sm-device} {
+    margin-bottom: 25px;
+  }
+
+  h2 {
+    font-size: 32px;
+  }
+
+  a {
+    color: $paragraph;
+
+    &:hover {
+      color: $brandColor;
+    }
+  }
+}
+
+.instragam-feed-item {
+  position: relative;
+
+  &__thumb {
+    position: relative;
+
+    &:before {
+      @include overlay($black, 0.5);
+      pointer-events: none;
+      @include hide;
+    }
+  }
+
+  &__content {
+    position: absolute;
+    color: $white;
+    font-size: 15px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    @include hide;
+
+    span {
+      &:not(:last-child) {
+        margin-right: 15px;
+      }
+    }
+
+  }
+
+  &:hover {
+    .instragam-feed-item {
+      &__thumb {
+        &:before {
+          @include show;
+        }
+      }
+
+      &__content {
+        @include show;
+      }
+    }
+  }
+}
+
+.twitter-feed-item {
+  &__head {
+    .icon {
+      color: $brandColor;
+      font-size: 120px;
+      line-height: 1;
+      display: block;
+      margin-bottom: 10px;
+
+      @media #{$sm-device} {
+        font-size: 100px;
+      }
+    }
+
+    h2 {
+      font-size: 32px;
+    }
+
+    .username {
+      color: $paragraph;
+
+      &:hover {
+        color: $brandColor;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__body {
+    margin-top: 40px;
+
+    @media #{$sm-device} {
+      margin-top: 25px;
+    }
+
+    .tweet-text {
+      font-size: 24px;
+
+      @media #{$sm-device} {
+        font-size: 18px;
+      }
+
+      a {
+        color: $paragraph;
+
+        &.user-profile {
+          text-transform: uppercase;
+          color: #bbbbbb;
+        }
+
+        &:hover {
+          color: $brandColor;
+        }
+      }
+    }
+  }
+}
